@@ -6,7 +6,7 @@ typedef struct {
     char T[10];
 } state;
 
-state arrOfState[9];
+state arrOfState[9]; //Array penampung state yang sudah dilalui
 
 void menuAwal();
 bool isMenang(state q);
@@ -14,14 +14,12 @@ bool isSeri(state q);
 void tulisState(state q);
 void pindahState(state *q, int i);
 
-
 int main(){
     int pilihan;
     int i;
     int j;
     state qSekarang; //Menampung state yang sedang terjadi sekarang
     state q;
-
 
     menuAwal();
     printf("\n>>");
@@ -76,54 +74,7 @@ int main(){
     for (i = 1;i < j;i++){
         printf("%s\t",arrOfState[i]);
     }
-/*
-    tulisState(qSekarang);
-    pindahState(&qSekarang,2);
-    printf("%s\n",qSekarang.T);
-    tulisState(qSekarang);
 
-    if (isMenang(qSekarang)){
-        printf("Udah menang\n");
-    } else if (isSeri(qSekarang)){
-        printf("Udah seri\n");
-    } else {
-        printf("belum menang\n");
-    }
-*/
-/*
-    pFile = fopen ("state.txt", "r");
-    while (!feof(pFile)){
-        if (fgets(stateSebaris, 101, pFile) == NULL){
-            break;
-        } else {
-            printf("%s\n",stateSebaris);
-
-            memcpy(state, &stateSebaris[0],9);
-            state[9] = '\0';
-
-            memcpy(state1, &stateSebaris[10],9);
-            state1[9] = '\0';
-
-            if (strcmp(state1,stateSeri) == 0){
-                printf("%s ialah state seri\n",state);
-            }
-
-
-            printf("%s\t\t%s",state,stateSekarang);
-
-            if (strcmp(state,stateSekarang) == 0){
-                printf("\tYa");
-                memcpy(state1, &stateSebaris[20],10);
-                state1[10] = '\0';
-
-                printf("%s\n",state1);
-            } else {
-                printf("\tTidak\n");
-            }
-        }
-
-
-    } */
     return 0;
 }
 
