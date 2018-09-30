@@ -6,7 +6,7 @@ typedef struct {
     char T[10];
 } state;
 
-state arrOfState[9]; //Array penampung state yang sudah dilalui
+state arrOfState[100];
 
 void menuAwal();
 bool isMenang(state q);
@@ -14,12 +14,14 @@ bool isSeri(state q);
 void tulisState(state q);
 void pindahState(state *q, int i);
 
+
 int main(){
     int pilihan;
     int i;
     int j;
     state qSekarang; //Menampung state yang sedang terjadi sekarang
     state q;
+
 
     menuAwal();
     printf("\n>>");
